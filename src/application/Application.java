@@ -3,6 +3,13 @@ package application;
 import client.OperationClient;
 import server.OperationServer;
 
+/**
+ * http://www.mkyong.com/webservices/jax-ws/jax-ws-hello-world-example/
+ * 
+ * @author dAmihl
+ *
+ */
+
 public class Application {
 
 	private static boolean startAsServer = true;
