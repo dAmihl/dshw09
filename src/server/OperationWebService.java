@@ -27,12 +27,19 @@ public class OperationWebService implements IWSOperations {
 
 	@Override
 	public BigInteger lucas(Integer arg0) {
-		System.out.println("Lucas number of "+arg0+".");
-		return new BigInteger("1");
+		System.out.println("Computing lucas number of "+arg0+".");
+		return internLucas(new BigInteger(arg0.toString()));
+	}
+	
+	private BigInteger internLucas(BigInteger N){
+				if( N.equals(BigInteger.ZERO))  return BigInteger.ONE.add(BigInteger.ONE);
+			    if( N.equals(BigInteger.ONE))  return BigInteger.ONE;
+			    return internLucas(N.subtract(BigInteger.ONE)).add(internLucas(N.subtract(BigInteger.ONE.add(BigInteger.ONE))));
 	}
 
 	@Override
 	public Boolean sleep(Integer ms) {
+		System.out.println("starting to sleep for "+ms+" ms.");
 		try {
 			Thread.sleep(ms);
 		} catch (InterruptedException e) {

@@ -8,4 +8,6 @@ how to run:
 3. Run jar with argument "server" or without argument to start as server
 3.1 Run jar with argument "client" to start as client.
 
-The server is currently not capable of handling multiple requests, but can rather easily be added by addin asynchronous thread-based computation.
+The server is currently not capable of handling multiple requests by one client,
+ but can rather easily be added by addin asynchronous thread-based computation.
+The server can handle multiple requests by multiple clients.

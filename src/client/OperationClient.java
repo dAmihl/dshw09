@@ -29,9 +29,11 @@ public class OperationClient {
 
         IWSOperations ops = service.getPort(IWSOperations.class);
         System.out.println("Set webservice to sleep for 2 seconds first.");
-        ops.sleep(2000);
+        ops.sleep(5000);
         System.out.println("Now Adding 1 and 5 on server: ");
         System.out.println(ops.add(1, 5));
+        System.out.println("Now computing lucas number of 10:");
+        System.out.println(ops.lucas(10));
 	}
 	
 }
